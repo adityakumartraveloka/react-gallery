@@ -1,0 +1,39 @@
+.Card {
+    max-width: 50%;
+    margin: auto;
+    border: 2px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 16px;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.img {
+    max-width: 80%;
+    height: auto;
+    width: auto;
+}
+
+.Card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+.container {
+    padding: 2px 16px;
+}
+
+.container.p {
+    font-weight: bold;
+}
+.button {
+    font-size: 18px;
+    background-color: salmon;
+    border-radius: 4px;
+}
+
+.button:hover {
+    color: black;
+    background-color: green;
+    cursor: pointer;
+}
