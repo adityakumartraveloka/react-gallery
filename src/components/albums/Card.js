@@ -11,7 +11,11 @@ class Card extends Component {
                 <div id="title">This is our title</div>
                 <div id="button">
                     <button id="Open">Open</button>
-                    <button id="Delete" onClick={()=>this.props.deleteAlbum(this.props.id)}>Delete</button>
+                    <button 
+                        id="Delete" 
+                        onClick={()=>this.props.deleteAlbum(this.props.id)}>
+                        Delete
+                    </button>
                 </div>
             </div>
         );

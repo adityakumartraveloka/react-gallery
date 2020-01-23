@@ -175,20 +175,13 @@ class App extends Component {
     };
 
     this.deleteAlbumHandler = this.deleteAlbumHandler.bind(this);
-
   }
 
   deleteAlbumHandler(album_id){
-    console.log(album_id);
-    // console.log(id => id === album_id);
     const index = this.state.album.findIndex(album => album.id === album_id);
     const album = this.state.album;
-    // console.log(this.state.album);
-    console.log('[index]',index);
     album.splice(index,1);
-    // console.log(album);
     this.setState({album: album});
-    console.log(album.length);
   }
 
   render (){

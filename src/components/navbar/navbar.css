@@ -1,13 +1,14 @@
 #wrapper {
     display: grid;
     border: 1px solid grey;
+    background-color: #e7e7e8;
     grid-template-rows: repeat(3,1fr);
-    justify-items: center;
-    align-items: center;
     margin: 0 auto;
     margin-bottom: 10px;
     max-width: 300px;
+    min-width: 300px;
     grid-gap: 10px;
+    border-radius: 10px;
 }
 
 #wrapper div{
@@ -26,6 +27,7 @@ a {
     color: white;
     transition-duration: 500ms;
     transition-property: all;
+    border-radius: 10px;
 }
 
 @media screen and (min-width: 650px){
@@ -33,12 +35,9 @@ a {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 1fr;
-        justify-items: center;
-        align-items: center;
         margin: 0 auto;
         margin-bottom: 10px;
         max-width: 950px;
         grid-gap: 10px;
     }
-    
 }
