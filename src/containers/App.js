@@ -25,15 +25,16 @@ class App extends Component {
   render (){
     return (
       <div className="App">
-        <Navbar/>
-        <p>This is a reactDemo.</p>
-        {this.state.image.map(image => {
-          return <Card 
-          source={image.img}
-          key={image.id}  
-          >
-          </Card>
-        })}
+          <Navbar/>
+          <div id="album">
+              {this.state.image.map(image => {
+                return <Card 
+                source={image.img}
+                key={image.id}  
+                >
+                </Card>
+              })}
+          </div>
       </div>
     );
   }

@@ -1,18 +1,12 @@
 import React from 'react';
 import './navbar.css'
 
-const rightStyle = {
-    float: 'right',
-}
-
 const NavBar = props => {
     return (
-        <div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li style={rightStyle}><a href="#">Login</a></li>
-                <li style={rightStyle}><a href="#">SignUp</a></li>
-            </ul>
+        <div id="wrapper">
+            <a href="https://www.google.com"><div>Home</div></a>
+            <a href="https://www.google.com"><div>Private</div></a>
+            <a href="https://www.google.com"><div>Login</div></a>
         </div>
     );
 }
