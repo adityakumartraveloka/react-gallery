@@ -177,6 +177,10 @@ class App extends Component {
     this.deleteAlbumHandler = this.deleteAlbumHandler.bind(this);
   }
 
+  showAlbumHandler(album_id){
+    this.props.history.push('/login');
+  }
+
   deleteAlbumHandler(album_id){
     const index = this.state.album.findIndex(album => album.id === album_id);
     const album = this.state.album;
@@ -195,8 +199,8 @@ class App extends Component {
                   key={album.id}
                   id={album.id}
                   deleteAlbum={this.deleteAlbumHandler}
+                  showAlbum={this.showAlbumHandler}
                 />
-                // console.log(props);
               })}
           </div>
       </div>
