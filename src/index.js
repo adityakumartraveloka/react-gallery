@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
+
 import App from './containers/App';
 import Login from './components/Login/login'
 import Signup from './components/SignUp/signup'
+import Photo from './components/photos/photo'
+
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -13,7 +16,7 @@ const routing = (
             <Route exact path="/" component={App}/>
             <Route path="/login" component={Login}/>
             <Route path="/signup" component={Signup}/>
-            <Route path="/album/:album_id" component={Login}/>
+            <Route path="/album/:album_id" component={Photo}/>
         </div>
     </Router>
 )

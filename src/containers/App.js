@@ -12,6 +12,7 @@ class App extends Component {
         {
           id: '1', 
           img: 'https://homepages.cae.wisc.edu/~ece533/images/airplane.png',
+          show: false,
           photos: [
             { id: '1c154fdf049ccd1', img: 'https://picsum.photos/300/210' },
             { id: '821b26b9fcf9750', img: 'https://picsum.photos/300/210' },
@@ -29,6 +30,7 @@ class App extends Component {
         {
           id: '2', 
           img: 'https://homepages.cae.wisc.edu/~ece533/images/baboon.png',
+          show: false,
           photos: [
             { id: '2b6b355fd261dde', img: 'https://picsum.photos/300/210' },
             { id: '1ad3bfb6f9a5847', img: 'https://picsum.photos/300/210' },
@@ -45,6 +47,7 @@ class App extends Component {
         {
           id: ' 3 ',
           img: 'https://homepages.cae.wisc.edu/~ece533/images/arctichare.png',
+          show: false,
           photos: [
             { id: 'b405d6b5204f72', img: 'https://picsum.photos/300/210' },
             { id: 'a460f72977ff226', img: 'https://picsum.photos/300/210' },
@@ -62,6 +65,7 @@ class App extends Component {
         {
           id: ' 4 ',
           img: 'https://homepages.cae.wisc.edu/~ece533/images/barbara.png',
+          show: false,
           photos: [
               { id: '9ad43aa12a3932f', img: 'https://picsum.photos/300/210' },
               { id: 'da8df0f1e96d0d5', img: 'https://picsum.photos/300/210' },
@@ -78,6 +82,7 @@ class App extends Component {
         {
           id: ' 5 ',
           img: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png',
+          show: false,
           photos: [
             { id: '77d5fe446e88512', img: 'https://picsum.photos/300/210' },
             { id: '43465c9e294805e', img: 'https://picsum.photos/300/210' },
@@ -94,6 +99,7 @@ class App extends Component {
       {
         id: ' 6 ',
         img: 'https://homepages.cae.wisc.edu/~ece533/images/fruits.png',
+        show: false,
         photos: [
           { id: '4c41c9c813e91a1', img: 'https://picsum.photos/300/210' },
           { id: '1cd741f6ac0bee2', img: 'https://picsum.photos/300/210' },
@@ -110,6 +116,7 @@ class App extends Component {
       {
         id: ' 7 ',
         img: 'https://homepages.cae.wisc.edu/~ece533/images/girl.png',
+        show: false,
         photos: [
           { id: '8b2438c07736688', img: 'https://picsum.photos/300/210' },
           { id: 'f6663a2fb622db', img: 'https://picsum.photos/300/210' },
@@ -126,6 +133,7 @@ class App extends Component {
       {
         id: ' 8 ',
         img: 'https://picsum.photos/300/210',
+        show: false,
         photos: [
           { id: '47d4b2b18bfb45c', img: 'https://picsum.photos/300/210' },
           { id: '47d7512d2567b8e', img: 'https://picsum.photos/300/210' },
@@ -142,6 +150,7 @@ class App extends Component {
       {
           id: ' 9 ',
           img: 'https://picsum.photos/300/210',
+          show: false,
           photos: [
             { id: '2a1895efe44b104', img: 'https://picsum.photos/300/210' },
             { id: '51d9e319617ce16', img: 'https://picsum.photos/300/210' },
@@ -158,6 +167,7 @@ class App extends Component {
         {
           id: ' 10 ',
           img: 'https://picsum.photos/300/210',
+          show: false,
           photos: [
             { id: 'd312b3b1eec5fc0', img: 'https://picsum.photos/300/210' },
             { id: '6d37bd212e5dcf1', img: 'https://picsum.photos/300/210' },
@@ -178,7 +188,8 @@ class App extends Component {
   }
 
   showAlbumHandler(album_id){
-    this.props.history.push('/login');
+    const index = this.state.album.findIndex(album => album.id === album_id);
+    return index;
   }
 
   deleteAlbumHandler(album_id){
@@ -196,14 +207,14 @@ class App extends Component {
               {this.state.album.map(album => {
                 return <Card 
                   source={album.img}
+                  state={this.state}
                   key={album.id}
                   id={album.id}
                   deleteAlbum={this.deleteAlbumHandler}
-                  showAlbum={this.showAlbumHandler}
                 />
               })}
           </div>
-      </div>
+        </div>
     );
   }
 };

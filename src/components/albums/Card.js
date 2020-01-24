@@ -5,7 +5,7 @@ import './Card.css';
 class Card extends Component {
    
     render(){
-        console.log('[Card.js] rendering..')
+        console.log('[Card.js] rendering..', this.props.state);
         return (
             <div id="card">
                 <div id="image">
@@ -13,9 +13,11 @@ class Card extends Component {
                 </div>
                 <div id="title">This is our title</div>
                 <div id="button">
-                    <Link id="Open" to='login'>
+                    <button 
+                        id="Delete" 
+                        onClick={()=>this.props.showAlbum(this.props.id)}>
                         Open
-                    </Link>
+                    </button>
                     <button 
                         id="Delete" 
                         onClick={()=>this.props.deleteAlbum(this.props.id)}>
