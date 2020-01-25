@@ -5,7 +5,7 @@ class Image extends Component {
     render() {
         return (
             <div id="image">
-                <img 
+                <img id="pic" 
                 src={this.props.src}
                 key={this.props.id}/>
             </div>

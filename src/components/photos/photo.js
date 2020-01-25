@@ -22,6 +22,7 @@ class Photo extends Component {
         }
     }
     render () {
+        console.log('[Photo.js]',this.props.params)
         return (
             <div id="album">
                 {this.state.photos.map(photo => {
