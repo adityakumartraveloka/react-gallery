@@ -7,12 +7,14 @@ import App from './containers/App';
 import Login from './components/Login/login'
 import Signup from './components/SignUp/signup'
 import Photo from './components/photos/photo'
-
+import NavBar from './components/navbar/navbar'
 import * as serviceWorker from './serviceWorker';
+// import NavBar from './components/navbar/navbar';
 
 const routing = (
     <Router>
         <div>
+            <NavBar/>
             <Route exact path="/" component={App}/>
             <Route path="/login" component={Login}/>
             <Route path="/signup" component={Signup}/>

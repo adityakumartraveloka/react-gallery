@@ -7,6 +7,7 @@ class Image extends Component {
             <div id="image">
                 <img id="pic" 
                 src={this.props.src}
+                alt=""
                 key={this.props.id}/>
             </div>
         );

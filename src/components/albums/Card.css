@@ -1,7 +1,7 @@
 #card {
     display: grid;
     border: 2px grey;
-    grid-template-rows: 70% 15% 15%;
+    grid-template-rows: auto-fit 70% 15% 15%;
     height: 300px;
     width: 300px;
     border-radius: 10px;
